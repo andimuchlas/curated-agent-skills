@@ -108,7 +108,6 @@ If the story is primarily proof and numbers, prefer HTML/data. If the central me
 
 ## Mode 1 — Video scrub
 
-Use [demo/video/index.html](demo/video/index.html) and [demo/video/PROMPT.md](demo/video/PROMPT.md).
 
 ### Generate the source clip
 
@@ -146,7 +145,6 @@ ffmpeg -i source.mp4 -an \
 
 ## Mode 2 — Three.js world
 
-Use [demo/threejs/index.html](demo/threejs/index.html) and [demo/threejs/PROMPT.md](demo/threejs/PROMPT.md).
 
 1. Produce three art-direction studies before committing. Each must change the field color, object material, light behavior, typography relationship, and composition—not just shader colors.
 2. Reject the generic default of a glowing blue planet in dark space unless the source specifically earns it.
@@ -163,7 +161,6 @@ Use local, pinned Three.js files in portable demos. Do not depend on a remote CD
 
 ## Mode 3 — HTML / data / type
 
-Use [demo/html-data/index.html](demo/html-data/index.html) and [demo/html-data/PROMPT.md](demo/html-data/PROMPT.md).
 
 1. Start with semantic headings, paragraphs, lists, tables, and real links.
 2. Turn the strongest evidence into one chart grammar: bars, line, range, slope, or comparison.
@@ -238,4 +235,4 @@ Return:
 - Desktop and mobile behavior.
 - Verification evidence and known limitations.
 
-Start at [demo/index.html](demo/index.html) for the three-mode launcher. Keep [REFERENCES.md](REFERENCES.md) as the external reading list.
+Keep [REFERENCES.md](REFERENCES.md) as the external reading list.

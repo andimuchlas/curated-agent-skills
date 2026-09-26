@@ -1,4 +1,4 @@
-# Antigravity Curated Super-Skills Suite
+# curated-skills
 
 > A high-performance, consolidated, and production-tested suite of 12 Super-Skills for Google Antigravity (agy), Claude Code, OpenAI Codex, and modern agentic AI coding assistants.
 
@@ -10,7 +10,7 @@ Most public skills collections suffer from "micro-skill bloat" -- hundreds of ti
 
 This repository consolidates over 140 modular skills into 12 comprehensive Super-Skills:
 - Zero Context Bloat: Your agent only loads 12 top-level skills into its index, saving up to 75% of context tokens.
-- 100% Capabilities Preserved: Every shader, demo, React component, and reference document is preserved in the respective references/ directory.
+- 100% Capabilities Preserved: Every shader, React component, script, and reference document is preserved in the respective references/ directory.
 - Instant Routing: Each Super-Skill includes an intelligent master catalog that routes tasks directly to the right recipe.
 
 ---
@@ -36,11 +36,10 @@ This repository consolidates over 140 modular skills into 12 comprehensive Super
 
 ## Installation Guide
 
-All skills conform to the open agent specification (SKILL.md with YAML frontmatter). You can install them into your tool of choice using the automated script or manual steps.
+All skills conform to the open agent specification (SKILL.md with YAML frontmatter). You can install them into your tool of choice using the automated scripts or manual copy.
 
-### 1. Automated Installation (Script)
+### 1. Linux & macOS (Bash)
 
-Clone the repository and run install.sh:
 ```bash
 git clone https://github.com/andimuchlas/skills.git
 cd skills
@@ -52,94 +51,75 @@ Choose your target tool:
   ```bash
   ./install.sh --all
   ```
-- Google Antigravity (agy):
+- With Symlinks (Live Development):
   ```bash
-  ./install.sh --agy
+  ./install.sh --symlink
   ```
-- Claude Code:
+- Single Tool:
   ```bash
-  ./install.sh --claude
+  ./install.sh --agy      # Google Antigravity
+  ./install.sh --claude   # Claude Code
+  ./install.sh --codex    # OpenAI Codex
   ```
-- OpenAI Codex:
+- Uninstall:
   ```bash
-  ./install.sh --codex
+  ./install.sh --uninstall
   ```
 
 ---
 
-### 2. Manual Installation by Platform
+### 2. Windows (PowerShell)
 
-#### A. Google Antigravity (agy / Antigravity IDE)
+Run PowerShell in the cloned repository:
+```powershell
+# Install for all tools
+.\install.ps1 -All
+
+# With Symlinks
+.\install.ps1 -Symlink
+
+# Single Tool
+.\install.ps1 -Agy
+.\install.ps1 -Claude
+.\install.ps1 -Codex
+
+# Uninstall
+.\install.ps1 -Uninstall
+```
+
+---
+
+### 3. Manual Installation by Platform
+
+#### Google Antigravity (agy / Antigravity IDE)
 Antigravity automatically discovers user skills placed in ~/.gemini/config/skills/.
 ```bash
 mkdir -p ~/.gemini/config/skills
 cp -r skills/* ~/.gemini/config/skills/
 ```
-- Symlink (Live Development): If you want changes in this git repo to immediately reflect in Antigravity:
-  ```bash
-  ln -sf $(pwd)/skills/* ~/.gemini/config/skills/
-  ```
-- Verification: Run agy or open a new chat session in Antigravity IDE. The 12 Super-Skills will be visible in the agent available skills catalog.
 
----
-
-#### B. Anthropic Claude Code
-Claude Code loads custom skills and workflows from ~/.claude/skills/ (global) or .claude/skills/ (per-project).
+#### Anthropic Claude Code
+Claude Code loads custom skills from ~/.claude/skills/ (global) or .claude/skills/ (per-project).
 ```bash
 mkdir -p ~/.claude/skills
 cp -r skills/* ~/.claude/skills/
 ```
-- Project-Level Installation:
-  ```bash
-  mkdir -p /path/to/your/project/.claude/skills
-  cp -r skills/* /path/to/your/project/.claude/skills/
-  ```
-- Verification: Launch claude in your terminal. Ask Claude: "What skills are available?" or start requesting tasks (e.g. "Audit this UI for AI slop").
 
----
-
-#### C. OpenAI Codex CLI / Agent Environment
-Codex loads external skill instructions from ~/.codex/skills/ or a workspace .codex/skills/ folder.
+#### OpenAI Codex CLI / Agent Environment
+Codex loads external skill instructions from ~/.codex/skills/ or .codex/skills/.
 ```bash
 mkdir -p ~/.codex/skills
 cp -r skills/* ~/.codex/skills/
 ```
-- Project-Level Installation:
-  ```bash
-  mkdir -p /path/to/your/project/.codex/skills
-  cp -r skills/* /path/to/your/project/.codex/skills/
-  ```
-- Verification: Start your Codex session. The agent will read the relevant SKILL.md when prompted with matching tasks.
 
 ---
 
-## How to Use the Skills
+## Prompt Cheatsheet
 
-You do not need to memorize complex syntax. All skills are semantically triggered via natural language:
-
-- Anti-Slop UI & Aesthetics:
-  > "Review this page with no-ai-design-slop and give it an editorial typography hierarchy."
-- Three.js Web Game Dev:
-  > "Create an isometric ARPG vertical slice with player movement, enemy aggro, and combat hitboxes."
-- Cinematic Web Motion:
-  > "Add smooth scrolling with Lenis and a scrubbed timeline animation for our features section."
-- Flutter & Dart:
-  > "Help me resolve this RenderFlex overflow and add unit tests with Mockito."
-- n8n Automation:
-  > "Design an error-tolerant n8n workflow that processes incoming webhooks with custom Python transforms."
+For ready-to-use prompt examples, trigger phrases, and practical recipes for each of the 12 Super-Skills, see [CHEATSHEET.md](CHEATSHEET.md).
 
 ---
 
-## License & Acknowledgments
+## License
 
-This curated repository is maintained by [andimuchlas](https://github.com/andimuchlas) under the [MIT License](LICENSE).
-
-### Third-Party Credits
-Portions of the underlying guides, techniques, and assets are derived from or inspired by the following open-source projects:
-
-- [MengTo/Skills](https://github.com/MengTo/Skills) by Meng To (Creative UI, 3D Web, Game Dev)
-- [Jakub Antalik](https://github.com/Jakubantalik) (metal-fx, thinking-orbs, border-beam)
-- [Darkroom Engineering](https://github.com/darkroomengineering/lenis) (lenis smooth scroll)
-- [czlonkowski/n8n-mcp](https://github.com/czlonkowski/n8n-mcp) & n8n Community
-- [ceorkm/mobile-app-ui-design](https://github.com/ceorkm/mobile-app-ui-design)
-- Community AI Agent Engineering Playbook (using-agent-skills)
+[MIT](https://opensource.org/licenses/MIT)

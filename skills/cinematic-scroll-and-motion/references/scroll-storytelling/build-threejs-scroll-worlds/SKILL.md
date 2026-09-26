@@ -9,7 +9,7 @@ Build one detailed real-time world and use native document scroll as its determi
 
 The mechanism is **one persistent Three.js world + one normalized reversible scroll state**. If removing either makes the experience collapse into stacked sections, this skill applies.
 
-The exact [Kage demo](demo/index.html) proves the quality bar; it is staging, not a mandatory subject or layout. Use its detailed anatomy only when the requested direction benefits from it: [references/kage-anatomy.md](references/kage-anatomy.md).
+Refer to the detailed anatomy when the requested direction benefits from it: [references/kage-anatomy.md](references/kage-anatomy.md).
 
 ## Route the request correctly
 

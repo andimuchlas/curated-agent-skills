@@ -79,7 +79,7 @@ When asked to implement any effect from this library:
 2. **Read the Specific Guidance**:
    View `references/<category>/<effect-name>/SKILL.md` to check dependencies, framework support (React / Vanilla / Tailwind / Three.js), and core constraints.
 3. **Inspect Ready Assets**:
-   Check if the recipe folder contains an `assets/` or `demo/` subdirectory (e.g. `CursorTrailShader.tsx`, CSS snippets, or GLSL vertex/fragment shaders) and reuse them directly instead of writing shaders from scratch.
+   Check if the recipe folder contains an `assets/` subdirectory (e.g. `CursorTrailShader.tsx`, CSS snippets, or GLSL vertex/fragment shaders) and reuse them directly instead of writing shaders from scratch.
 4. **Preserve Performance & Accessibility**:
    - Always support `prefers-reduced-motion` media queries (pause particle loops, disable aggressive trails).
    - Use `requestAnimationFrame` with proper cleanup in `useEffect` / `onDestroy`.

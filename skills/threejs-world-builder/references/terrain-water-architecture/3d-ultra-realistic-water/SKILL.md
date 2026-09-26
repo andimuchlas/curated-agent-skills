@@ -19,7 +19,7 @@ Source: extracted from **Pirate Ship Sunset**, a single-file Three.js r169 scene
 
 ## Reuse the working effect
 
-Copy [assets/ocean.mjs](assets/ocean.mjs). You pass in the project's own `THREE`, and the module does not import a second copy. Before you integrate it, read [references/ocean.md](references/ocean.md), which covers the full constants, render order, buoyancy and post. [The demo](demo/index.html) runs this same module inside the original scene. `demo/build.mjs` rebuilds it from the reference page.
+Copy [assets/ocean.mjs](assets/ocean.mjs). You pass in the project's own `THREE`, and the module does not import a second copy. Before you integrate it, read [references/ocean.md](references/ocean.md), which covers the full constants, render order, buoyancy and post.
 
 ```js
 import { createWaves, bakeOceanDetail, createOcean, createWake, createPlanarReflection } from './ocean.mjs';
